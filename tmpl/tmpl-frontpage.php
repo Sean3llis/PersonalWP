@@ -5,7 +5,9 @@
 
 <div class="fluid-container">
 	<div class="row padded-row" id="hero">
-		<div class="overlay"></div>
+		<div class="svg-wrapper">
+			<svg id="maintest"></svg>
+		</div>
 	</div>
 
 
