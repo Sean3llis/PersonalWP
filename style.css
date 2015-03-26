@@ -1,7 +1,18 @@
 /*
 * Theme Name: Sean Ellis
-* Theme Author: Sean Ellis
-
-
+* Author Name: Sean Ellis
 
 */
+/* HERO */
+/* line 10, sass/style.scss */
+#hero {
+  height: 700px;
+  background: url("https://unsplash.imgix.net/photo-1426086800127-2601510ca027?q=75&fm=jpg&s=b7912fc0e02b5874c3e4369ac3d1d3bc") no-repeat center center;
+}
+/* line 13, sass/style.scss */
+#hero .overlay {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
