@@ -4,19 +4,47 @@
 
 */
 
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 
 /* HERO */
 
 #hero {
 	height: 700px;
-	background: url('https://unsplash.imgix.net/photo-1426086800127-2601510ca027?q=75&fm=jpg&s=b7912fc0e02b5874c3e4369ac3d1d3bc') no-repeat center center;
+	background: url('https://unsplash.imgix.net/photo-1422513391413-ddd4f2ce3340?q=75&fm=jpg&s=282e5978de17d6cd2280888d16f06f04') no-repeat center center;
+	text-align: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+
+	svg#maintest {
+		height: 500px;
+		width: 500px;
+	}
+
+	.svg-wrapper {
+		@include vertical-align;
+	}
+
 	.overlay {
-		height: 100%;
-		width: 100%;
+		position: absolute;
 		background-color: black;
 		opacity: 0.5;
+		transition: all 0.5s ease-in-out;
+
 		&:hover {
-			
+			opacity: 0.7;
 		}
 	}
+
+
+}
+
+.row {
+	margin: 0px;
 }
