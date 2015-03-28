@@ -16,10 +16,11 @@
 		});
 		var path = $('#maintest circle');
 		var wrapper = path.parents('#maintest');
-		animateElement(mainCircle.node, wrapper, length );
+		animateElement(mainCircle, wrapper, length );
 	}
 
 	function animateElement(path, parent, length){
+		var path = path.node
 		path.style.strokeDasharray = length + ' ' + length;
 
 		// offset that stroke so that it is all 
@@ -29,7 +30,7 @@
 		path.style.transition = path.style.WebkitTransition =
 	  'all 0.5s ease-in-out';
   
-		$(parent).on({
+		$(path).on({
 			mouseenter: function(){
 				path.style.strokeDashoffset = 0;
 			},
