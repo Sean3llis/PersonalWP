@@ -1,14 +1,7 @@
-<?php /* Template Name: Front Page */ ?>
+ma<?php /* Template Name: Front Page */ ?>
 
 
 <?php get_header(); ?>
-
-<div class="fluid-container">
-	<div class="row padded-row" id="hero">
-		<div class="svg-wrapper">
-			<svg id="maintest"></svg>
-		</div>
-	</div>
-
-
-</div>
+<?php get_template_part('partials/hero'); ?>
+<?php get_template_part('partials/featured'); ?>
+<?php get_footer(); ?>

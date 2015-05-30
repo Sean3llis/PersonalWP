@@ -6,38 +6,27 @@
 /* HERO */
 /* line 18, sass/style.scss */
 #hero {
-  height: 700px;
-  background: url("https://unsplash.imgix.net/photo-1422513391413-ddd4f2ce3340?q=75&fm=jpg&s=282e5978de17d6cd2280888d16f06f04") no-repeat center center;
-  text-align: center;
-  -webkit-background-size: cover;
-  background-size: cover;
+  height: 490px;
+  background-image: url(http://localhost:8888/wp-content/uploads/2015/04/groovepaper.png);
+  overflow: hidden;
 }
-/* line 25, sass/style.scss */
-#hero svg#maintest {
-  height: 500px;
-  width: 500px;
-}
-/* line 30, sass/style.scss */
-#hero .svg-wrapper {
+/* line 22, sass/style.scss */
+#hero .artboard {
+  background-color: white;
+  height: 400px;
+  width: 400px;
   position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-/* line 34, sass/style.scss */
-#hero .overlay {
-  position: absolute;
-  background-color: black;
-  opacity: 0.5;
-  transition: all 0.5s ease-in-out;
-}
-/* line 40, sass/style.scss */
-#hero .overlay:hover {
-  opacity: 0.7;
+  top: 27%;
+  margin-left: 40px;
 }
 
-/* line 48, sass/style.scss */
+/* line 32, sass/style.scss */
+#featured {
+  height: 400px;
+  background-color: #404040;
+}
+
+/* line 37, sass/style.scss */
 .row {
   margin: 0px;
 }
