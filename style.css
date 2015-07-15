@@ -4,7 +4,7 @@
 
 */
 .fill-dark {
-  fill: #242A30; }
+  fill: #313131; }
 
 .fill-darkAccent {
   fill: #28727C; }
@@ -13,7 +13,7 @@
   fill: #ffffff; }
 
 .stroke-dark {
-  stroke: #242A30; }
+  stroke: #313131; }
 
 .stroke-darkAccent {
   stroke: #28727C; }
@@ -25,7 +25,7 @@
 /********************* NAVBAR **********************/
 /**************************************************/
 #navbar {
-  background-color: #242A30;
+  background-color: #313131;
   border-top: 1px dotted #ffffff;
   border-bottom: 1px dotted #ffffff;
   width: 100%;
@@ -33,7 +33,7 @@
   z-index: 10; }
   #navbar.sticky {
     position: fixed;
-    background-color: #242A30;
+    background-color: #313131;
     top: 0px;
     border-top: none; }
   #navbar .main-nav {
@@ -69,7 +69,7 @@
         width: 100%;
         margin: 0;
         z-index: 1;
-        border-top: 1px dotted #242A30; }
+        border-top: 1px dotted #313131; }
 
 /***************************************************/
 /********************* HERO **********************/
@@ -134,7 +134,7 @@
     padding: 0px;
     max-width: none; }
     #aboutme .content-wrapper .about-title {
-      color: #242A30;
+      color: #313131;
       font-size: 48px; }
     #aboutme .content-wrapper .about-card {
       background-color: #ffffff;
@@ -188,10 +188,10 @@
         stroke: #28727C;
         stroke-width: 1; }
       #aboutme .content-wrapper #usa-map .svg-state-unlived {
-        fill: #242A30; }
+        fill: #313131; }
       #aboutme .content-wrapper #usa-map #pointer {
         opacity: 0;
-        stroke: #242A30; }
+        stroke: #313131; }
       #aboutme .content-wrapper #usa-map #location-text {
         opacity: 0; }
       #aboutme .content-wrapper #usa-map .radar {
@@ -217,7 +217,7 @@
     #experience .experience-card .chart-left {
       text-align: right;
       border-right: 1px solid #28727C;
-      background-color: #242A30;
+      background-color: #313131;
       padding: 20px 20px 0px 0px; }
       #experience .experience-card .chart-left * {
         color: #ffffff; }
@@ -245,7 +245,7 @@
         font-weight: normal; }
       #experience .experience-card .chart-left .role {
         background-color: #ffffff;
-        color: #242A30;
+        color: #313131;
         letter-spacing: 4px;
         display: block;
         padding: 3px; }
@@ -255,7 +255,7 @@
           position: relative;
           display: inline-block;
           background-color: #ffffff;
-          color: #242A30;
+          color: #313131;
           margin: 2px 0px 2px 20px;
           padding: 2px 10px 4px 10px;
           line-height: 15px; }
@@ -274,7 +274,7 @@
               fill: #ffffff; }
         #experience .experience-card .chart-left .tag-wrapper hr {
           position: absolute;
-          border: 1px dotted #242A30;
+          border: 1px dotted #313131;
           width: 117%;
           bottom: 0px;
           right: -1px;
@@ -297,7 +297,7 @@
             width: 14px;
             border-radius: 50%;
             background-color: #28727C;
-            border: 1px solid #242A30;
+            border: 1px solid #313131;
             position: absolute;
             left: 7px;
             top: 0px;
@@ -347,7 +347,7 @@
     background-color: #28727C;
     padding: 10px 20px; }
     #treehouse .content-wrapper .badge-wrapper hr {
-      border-color: #242A30; }
+      border-color: #313131; }
     #treehouse .content-wrapper .badge-wrapper .treehouse-badge {
       display: inline-block;
       padding: 0px 5px; }
@@ -387,7 +387,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: #242A30;
+      background-color: #313131;
       opacity: 0;
       -webkit-transition: opacity .25s ease-in-out;
       -moz-transition: opacity .25s ease-in-out;
@@ -398,7 +398,7 @@
       max-width: 100%; }
     #portfolio .content-wrapper .portfolio-wrapper .post-title {
       position: absolute;
-      color: #242A30;
+      color: #313131;
       background-color: #ffffff;
       font-size: 20px;
       line-height: 40px;
@@ -411,7 +411,7 @@
       #portfolio .content-wrapper .portfolio-wrapper .post-title:before {
         content: "";
         position: absolute;
-        border-bottom: 1px dotted #242A30;
+        border-bottom: 1px dotted #313131;
         top: 0px;
         left: 0px;
         width: 100%; }
@@ -437,19 +437,19 @@
     text-align: center; }
     #single-content .slide .hero-img {
       max-width: 100%;
-      border-bottom: 1px solid #242A30; }
+      border-bottom: 1px solid #313131; }
   #single-content .back-arrow {
     background-color: #ffffff;
     padding: 40px 0px; }
     #single-content .back-arrow .fa {
-      color: #242A30;
+      color: #313131;
       font-size: 40px; }
 
 /***************************************************/
 /********************* FOOTER **********************/
 /**************************************************/
 footer {
-  background-color: #242A30;
+  background-color: #313131;
   height: 400px;
   color: #28727C;
   padding-top: 100px;
@@ -480,7 +480,7 @@ p {
   font-size: 20px; }
 
 .heading {
-  background-color: #242A30;
+  background-color: #313131;
   padding: 4px 12px;
   color: #ffffff;
   font-size: 28px;
