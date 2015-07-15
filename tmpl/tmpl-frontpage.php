@@ -2,13 +2,79 @@
 
 
 <?php get_header(); ?>
+<?php get_template_part('partials/hero'); ?>
+<?php get_template_part('partials/navbar'); ?>
+<?php get_template_part('partials/aboutme'); ?>
+<?php get_template_part('partials/experience'); ?>
+<?php get_template_part('partials/portfolio'); ?>
 
-<div class="fluid-container">
-	<div class="row padded-row" id="hero">
-		<div class="svg-wrapper">
-			<svg id="maintest"></svg>
-		</div>
-	</div>
+<br>
+<br>
+<br>
+<?php // get_template_part('partials/metaball'); ?>
+<?php // get_template_part('partials/treehouse'); ?>
 
 
-</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<?php get_footer(); ?>
