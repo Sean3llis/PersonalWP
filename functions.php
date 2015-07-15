@@ -22,7 +22,7 @@
 		if(is_single()){
 			wp_enqueue_script('single_js', get_template_directory_uri() . '/js/single.js', array('jquery'), '', false);
 		}
-		if(is_page(5)){
+		if( is_front_page() ){
 			wp_enqueue_script('frontpage_js', get_template_directory_uri() . '/js/frontpage.js', array('jquery'), '', false);
 			wp_enqueue_script('treehouse_js', get_template_directory_uri() . '/js/treehouse.js', array('jquery'), '', false);
 		}
