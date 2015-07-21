@@ -44,7 +44,8 @@
 							<div class="col-lg-8 col-sm-7 chart-right">
 								<ul class="list">
 									<?php while( have_rows('bullets') ) : the_row(); ?>
-										<li>lorem ipsum et dolor amut ist folumi lorem ipsum et dolor amut ist folumi lorem ipsum et dolor amut ist folumi lorem ipsum et dolor amut ist folumi lorem ipsum et dolor amut ist folumi lorem ipsum et dolor amut ist folumi
+										<li>
+											<?php the_sub_field('point') ?>
 										</li>
 										<div class="bullet"></div>
 									<?php endwhile; ?>
