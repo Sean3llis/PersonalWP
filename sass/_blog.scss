@@ -32,22 +32,30 @@
 				.thumb-wrapper {
 					position: relative;
 					height: 240px;
-					background-attachment: fixed;
 					background-size: cover;
 					background-position: center;
 					background-color: $color_dark;
-					h4 {
-						font-family: 'Lato', 'arial', sans-serif;
-						// @include vertical-align;
-						bottom: 0px;
-						position: absolute;
-						background-color: #ffffff;
-						padding: 12px 24px;
-						margin: 0 auto;
-						left: 0px;
-						right: 0px;
-						max-width: 33%;
-						text-align: center;
+					.blog-title-wrapper {
+						@include vertical-align;
+						position: relative;
+						h4 {
+							padding: 12px 24px;
+							background-color: #ffffff;
+							margin: 0 auto;
+							max-width: 33%;
+							text-align: center;
+						}
+						.date {
+							position: absolute;
+							left: 0px;
+							right: 0px;
+							margin: 0 auto;
+							width: 30px;
+							text-align: center;
+							height: 30px;
+							top: -15px;
+							background-color: $color_light;
+						}
 					}
 					img {
 						max-width: 100%;

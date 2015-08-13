@@ -1,61 +1,61 @@
 <div class="row" id="experience">
 	<div class="content-wrapper">
-		<div class="heading">
-			Work Experience
-		</div>
+	<div class="heading-wrapper">
+		<h2>Resume</h2>
+		<div class="subheading">& Work Experience</div>
+	</div>
 
 		<?php if( have_rows('resume_points') ) : ?>
+			<?php $card_number = 0; ?>
 			<?php while( have_rows( 'resume_points' ) ) : the_row();  ?>
-				<div class="row experience-card">
+				<article class="row experience-card">
 					<div class="card-inner">
-						<div class="col-lg-4 col-sm-5 chart-left">
+						<div class="col-lg-3 col-sm-5 chart-left">
 							<div class="date">
-								<span><?php the_sub_field('starting_year'); ?>
-									<small>
-										<?php the_sub_field('starting_month'); ?>
-									</small>
-								</span>&nbsp;-&nbsp;
+									<?php echo get_sub_field('starting_year'); echo ' - '; ?>
 
-								<span><?php the_sub_field('ending_year'); ?>
-									<small>
-										<?php the_sub_field('ending_month'); ?>
-									</small>
-								</span>
+									<?php echo get_sub_field('ending_year'); ?>
 
 							</div>
-							<div class="company"><?php the_sub_field('company_name'); ?></div>
-							<div class="role"><?php the_sub_field('role'); ?></div>
+
+							<div class="company">
+								<?php the_sub_field('company_name'); ?>
+							</div>
+
+							<div class="role">
+								<?php the_sub_field('role'); ?>
+							</div>
+
 							<div class="tag-wrapper">
 						<?php $languages = get_sub_field('languages'); ?>
 						<?php if( !empty($languages) ) : foreach ($languages as $language) :?>
 							<span class="language lang-<?php echo $language->post_name ?>">
+							<i class="fa fa-circle"></i>
 								<?php echo $language->post_title; ?>
-
-							<?php get_template_part('img/svg', 'tag'); ?>
-							<hr>
-
 							</span>
 						<?php endforeach; endif; ?>
 						</div>
+						<div class="clearfix"></div>
+						
 						</div>
 
 						<?php if( have_rows('bullets') ) : ?>
 
-							<div class="col-lg-8 col-sm-7 chart-right">
+							<div class="col-lg-9 col-sm-7 chart-right">
 								<ul class="list">
 									<?php while( have_rows('bullets') ) : the_row(); ?>
 										<li>
 											<?php the_sub_field('point') ?>
+											<div class="bullet"></div>
 										</li>
-										<div class="bullet"></div>
 									<?php endwhile; ?>
 								</ul>
 							</div>
 							<div class="clearfix"></div>
 						<?php endif; ?>
 					</div>
-				</div>
-			<?php endwhile; endif;?>
+				</article>
+			<?php $card_number++; endwhile; endif;?>
 
 	</div>
 </div>

@@ -1,7 +1,4 @@
-
-
 SE.init = function(){
-	var $body = $('body');
 	SE.ele.heroCells = document.querySelectorAll('.sub-table .cell-inner');
 	SE.ele.logo = document.querySelectorAll('.logo-inner');
 	SE.ele.hero = document.querySelectorAll('#hero');
@@ -12,81 +9,56 @@ SE.init = function(){
 	SE.ele.navItems = document.querySelectorAll('.main-nav .menu-item a');
 	SE.ele.portfolio = document.querySelectorAll('.portfolio-wrapper');
 	SE.ele.metaBall = document.getElementById('metaball');
+	SE.ele.exp = document.getElementById('experience');
+	SE.ele.scrollDown = document.getElementById('scroll-down');
+	SE.ele.arrow = document.querySelectorAll('#scroll-down i');
 	SE.ele.navbar = document.getElementById('navbar');
 	SE.ele.locationBox = document.getElementById('location-box');
 	SE.ele.locationText = document.getElementById('location-text');
 	SE.ele.$cards = $('.experience-card');
 	SE.ele.$treehouse = $('#treehouse');
-	SE.util.setUpNav();
 	SE.util.setUpMap();
-	SE.anim.hero();
 	SE.setListeners();
-	SE.util.ajaxTreehouse();
 	SE.util.mapShown = false;
 	SE.util.scrollHandler();
+	SE.anim.pattern();
+	SE.offset = SE.ele.exp.offsetTop;
 };
 
 SE.util.getRandom = function(min,max){
 	return Math.random() * (max - min) + min;
 }
 
-SE.anim.showHero = function(){
-	var hero = SE.ele.hero;
+SE.anim.pattern = function(){
+	var circle = document.getElementById('pattern-circle');
+	var rect = document.getElementById('pattern-rect');
 	Velocity({
-		e: hero,
+		e: circle,
 		p: {
-			height: 600 + "px"
+			r: 0
 		},
 		o: {
-			duration: 500,
-			complete: SE.anim.hero
+			loop: true,
+			duration: 800,
+			easing: "linear",
+			delay: 200
 		}
 	});
-}
-
-SE.anim.hero = function(){
-	var cells = SE.ele.heroCells;
-	var logo = SE.ele.logo;
-	var heroBackground = SE.ele.heroBackground;
-	var hero = SE.ele.hero;
-
 	Velocity({
-		e: logo,
-		p: {opacity: "1"},
-		o: {duration: 1200, delay: 600}
-	});
-
-	function scrollBackground(){
-		Velocity({
-			e: heroBackground,
-			p: {
-				"backgroundPositionY": "-=50px"
-			},
-			o: {easing: "linear", duration: 2000, complete: scrollBackground}
-		});
-	};
-	scrollBackground()
-
-	Velocity({
-		e: cells,
-		p: "transition.slideUpIn",
+		e: rect,
+		p: {
+			width: 0,
+			height: 0,
+			x: 1,
+			y: 1
+		},
 		o: {
-			stagger: 100,
-			delay: 1400,
-			duration: 2000
+			loop: true,
+			duration: 1600,
+			easing: "linear",
+			delay: 200
 		}
 	});
-}
-
-SE.anim.bullets = function(){
-	var bullets = SE.ele.bullets;
-	if(bullets.length){
-		Velocity({
-			e: bullets,
-			p: "transition.slideLeftIn",
-			o: {stagger: 100}
-		});
-	}
 }
 
 SE.anim.navbar = function(bool) {
@@ -175,8 +147,8 @@ SE.util.navHoverIn = function(e){
 		if(!$navItem.hasClass('velocity-animating')){
 			Velocity({
 				e: $navItem,
-				p: { 'padding-left': '38px', 'padding-right': '38px', 'color': ['#313131', 'linear'] },
-				o: { easing: 'spring', duration: 600}
+				p: { 'padding-left': '38px', 'padding-right': '38px', 'color': ['#FFFFFF', 'linear'] },
+				o: { easing: 'easeInOutCirc', duration: 600}
 			});
 			Velocity({
 				e: swipeDiv,
@@ -191,7 +163,7 @@ SE.util.navHoverIn = function(e){
 		if(!$navItem.hasClass('velocity-animating')){
 			Velocity({
 				e: $navItem,
-				p: { 'padding-left': '28px', 'padding-right': '28px', 'color': ['#FFFFFF', 'linear'] },
+				p: { 'padding-left': '28px', 'padding-right': '28px', 'color': ['#313131', 'linear'] },
 				o: { easing: 'easeOutQuad', duration: 400}
 			});
 			Velocity({
@@ -243,10 +215,12 @@ SE.util.setUpMap = function(){
 	SE.ele.map = document.getElementById('usa-map');
 	SE.ele.radars = document.querySelectorAll('.radar');
 	SE.ele.pointer = document.getElementById('pointer');
-	SE.ele.length = SE.ele.pointer.getTotalLength();
-	SE.ele.pointer.style.strokeDasharray = SE.ele.length + ' ' + SE.ele.length;
-	SE.ele.pointer.style.strokeDashoffset = SE.ele.length;
-	SE.ele.pointer.style.opacity = 1;
+	if(SE.ele.pointer){
+		SE.ele.length = SE.ele.pointer.getTotalLength(); 
+		SE.ele.pointer.style.strokeDasharray = SE.ele.length + ' ' + SE.ele.length;
+		SE.ele.pointer.style.strokeDashoffset = SE.ele.length;
+		SE.ele.pointer.style.opacity = 1;
+	}
 
 	Velocity.RegisterEffect("transition.radar", {
     defaultDuration: 2500,
@@ -256,17 +230,13 @@ SE.util.setUpMap = function(){
 	});
 }
 
-SE.util.setUpNav = function(){
-	var height = $(SE.ele.navbar).css('height');
-	$('.nav-placeholder').css('height', height);
-}
 
 SE.util.scrollHandler = function(){
-	($(window).scrollTop() >= 600) ? SE.anim.navbar(true) : SE.anim.navbar(false);
+	($(window).scrollTop() >= SE.offset) ? SE.anim.navbar(true) : SE.anim.navbar(false);
 	if ($(window).scrollTop() >= 500 && !SE.util.mapShown) {
 		SE.anim.usa();
 		SE.util.mapShown = true;
 	}
 }
 
-window.onload = SE.init;
+$(document).ready(SE.init);

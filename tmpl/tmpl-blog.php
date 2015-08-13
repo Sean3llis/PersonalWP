@@ -23,7 +23,17 @@
 				</div>
 				<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 				<div style="background-image: url('<?php echo $url ?>');" class="thumb-wrapper">
-				<h4><?php $title = $post->post_title; if(!empty($title)){echo $title;} ?></h4>
+				<div class="blog-title-wrapper">
+					<h4><?php $title = $post->post_title; if(!empty($title)){echo $title;} ?></h4>
+					<span class="date">
+						<span class="month">
+							<?php echo the_time('M'); ?>
+						</span>
+						<span class="day">
+							<?php echo the_time('j'); ?>
+						</span>
+					</span>
+				</div>
 				</div>
 			</a>
 			<div class="excerpt">
