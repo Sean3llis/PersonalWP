@@ -470,57 +470,60 @@ footer {
       background-color: #ffffff; }
       #blog-list .content-wrapper .blog-wrapper .heading-wrapper {
         text-align: center; }
-      #blog-list .content-wrapper .blog-wrapper .blog-post .counter {
+      #blog-list .content-wrapper .blog-wrapper .blog-post {
         position: relative; }
-        #blog-list .content-wrapper .blog-wrapper .blog-post .counter .num {
+        #blog-list .content-wrapper .blog-wrapper .blog-post .date {
           position: absolute;
-          top: -10px;
-          line-height: 20px;
-          position: absolute;
-          left: 0px;
-          right: 0px;
+          left: -80px;
+          top: 20px;
           margin: 0 auto;
+          width: 60px;
           text-align: center;
-          color: #cfcfcf;
-          background-color: #ffffff;
-          padding: 0px 10px;
-          width: 30px; }
-      #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper {
-        position: relative;
-        height: 240px;
-        background-size: cover;
-        background-position: center;
-        background-color: #313131; }
-        #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper .blog-title-wrapper {
-          position: relative;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+          background-color: #6EB7A8; }
+          #blog-list .content-wrapper .blog-wrapper .blog-post .date .fa {
+            color: #ffffff; }
+        #blog-list .content-wrapper .blog-wrapper .blog-post .counter {
           position: relative; }
-          #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper .blog-title-wrapper h4 {
-            padding: 12px 24px;
-            background-color: #ffffff;
-            margin: 0 auto;
-            max-width: 33%;
-            text-align: center; }
-          #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper .blog-title-wrapper .date {
+          #blog-list .content-wrapper .blog-wrapper .blog-post .counter .num {
+            position: absolute;
+            top: -10px;
+            line-height: 20px;
             position: absolute;
             left: 0px;
             right: 0px;
             margin: 0 auto;
-            width: 30px;
             text-align: center;
-            height: 30px;
-            top: -15px;
-            background-color: #ffffff; }
-        #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper img {
-          max-width: 100%;
-          background-color: #313131;
-          height: auto;
-          text-align: center; }
-      #blog-list .content-wrapper .blog-wrapper .blog-post .excerpt {
-        padding-top: 20px; }
+            color: #cfcfcf;
+            background-color: #ffffff;
+            padding: 0px 10px;
+            width: 30px; }
+        #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper {
+          position: relative;
+          height: 240px;
+          background-size: cover;
+          background-position: center;
+          background-color: #313131; }
+          #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper .blog-title-wrapper {
+            position: relative;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            position: relative; }
+            #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper .blog-title-wrapper h4 {
+              font-family: 'Lato', 'arial', sans-serif;
+              padding: 12px 24px;
+              background-color: #ffffff;
+              margin: 0 auto;
+              max-width: 33%;
+              text-align: center; }
+          #blog-list .content-wrapper .blog-wrapper .blog-post .thumb-wrapper img {
+            max-width: 100%;
+            background-color: #313131;
+            height: auto;
+            text-align: center; }
+        #blog-list .content-wrapper .blog-wrapper .blog-post .excerpt {
+          padding-top: 20px; }
 
 /***************************************************/
 /********************* GLOBAL **********************/
