@@ -8,7 +8,7 @@
   <title>Sean Ellis</title>
   <?php wp_head(); ?>
 </head>
-<body class="<?php body_class(); ?>">
+<body <?php body_class(); ?>>
 
 <div class="fluid-container">
 

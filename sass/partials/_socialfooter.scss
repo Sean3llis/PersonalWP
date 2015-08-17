@@ -1,0 +1,26 @@
+#social-footer {
+	background-color: $color_darkAccent;
+	.content-wrapper {
+		padding: 20px 0px;
+		text-align: center;
+		.social-list {
+			margin: 0px;
+			li {
+				padding: 0px 20px;
+				a {
+					.fa {
+						color: $color_light;
+						font-size: 24px;
+					}
+				}
+			}
+		}
+	}
+}
+footer {
+	background-color: darken($color_darkAccent, 10%);
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	color: $color_light;
+	height: 200px;
+}

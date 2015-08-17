@@ -1,0 +1,34 @@
+#insta {
+	#sb_instagram {
+		padding: 40px 0px;
+		float: none;
+		.sb_instagram_header {
+			max-width: 800px;
+			margin: 0px auto;
+			padding-bottom: 20px;
+			float: none;
+			height: 100px;
+			text-align: center;
+			a {
+				float: none;
+			}
+			.sbi_header_text{
+				float: none;
+				h3 {
+					float: none;
+					margin: 0px !important;
+				}
+			}
+			.sbi_header_img {
+				margin: 0px auto !important;
+				float: none;
+			}
+		}
+		#sbi_images {
+			max-width: 800px;
+			margin: 0px auto;
+			float: none;
+			clear: both;
+		}
+	}
+}

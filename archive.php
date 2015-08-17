@@ -1,14 +1,18 @@
+<?php get_header(); ?>
 <?php /* Template Name: Blog Listing */ ?>
 
 
 <?php get_header(); ?>
-<?php get_template_part('partials/hero'); ?>
-<?php get_template_part('partials/navbar'); ?>
+
+<?php $c = get_category( get_query_var('cat') ); ?>
+<div class="row archive-hero" id="hero" style="background-image: url(<?php echo $img['url']; ?>)">
+	<div class="titles-wrapper">
+		<h1><?php echo $c->name; ?></h1>
+	</div>
+</div>
 <div id="blog-list">
-	<div class="content-wrapper">
-		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="blog-wrapper col-md-6">
+<div class="content-wrapper">
+<div class="blog-wrapper">
 				<div class="heading-wrapper">
 					<h2>Blog</h2>
 					<div class="subheading">Web Development | Web Design</div>
@@ -16,6 +20,7 @@
 
 				<?php $counter = 1; $posts = get_posts(array(
 					'posts_per_page' => '10',
+					'category_name'=> $c->slug
 					)); foreach($posts as $post ) : setup_postdata($post); ?>
 					<div class="blog-post">
 						<a href="<?php the_permalink(); ?>">
@@ -55,25 +60,14 @@
 						</div>
 					</div>
 					<?php $counter++; endforeach; wp_reset_postdata(); ?>
-
-				</div>
-				<div class="col-md-3">
-				 <?php $categories = get_categories(array(
-				 	'number' => 4
-				 )); ?> 
-					<div class="categories">
-						<div class="categories-title">
-							Categories
-						</div>
-						<ul class="categories-list">
-							<?php foreach($categories as $c) : ?>
-								<li><?php echo $c->name; ?></li>
-							<?php endforeach; ?>
-						</ul>
-					</div>
-					<div class="clearfix"></div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<?php get_footer(); ?>
+
+<?php get_template_part('partials/navbar'); ?>
+
+
+
+
+
+<?php get_footer(); ?>

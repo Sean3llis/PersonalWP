@@ -1,7 +1,6 @@
 </div>
 <footer>
-	Sean Ellis<br>
-	Copyright 2015
+	&copy;<?php echo date('Y'); ?> | Sean Ellis | Brooklyn, NY
 </footer>
 
 <?php wp_footer(); ?>

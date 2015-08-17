@@ -6,7 +6,10 @@ SE.anim = {};
 
 SE.init = function(){
 	SE.ele.about = document.getElementById('aboutme');
-	SE.offset = SE.ele.exp.offsetTop;
+	SE.ele.navbar = document.getElementById('navbar');
+	if(SE.ele.about){
+		SE.offset = SE.ele.exp.offsetTop;
+	}
 	SE.setListeners();
 	SE.navMenuListener();
 }
