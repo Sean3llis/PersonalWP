@@ -515,9 +515,9 @@ $break-small: 768px;
 			position: relative;
 			text-align: center;
 			overflow: hidden;
+			padding: 0px;
 			.portfolio-thumb {
-				max-width: 100%;
-				height: 150px;
+				width: 100%;
 			}
 		}
 	}
@@ -551,6 +551,7 @@ $break-small: 768px;
 /**************************************************/
 
 @import 'partials/blog';
+@import 'partials/single';
 @import 'partials/archive';
 @import 'partials/insta';
 @import 'partials/socialfooter';

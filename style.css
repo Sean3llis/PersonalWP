@@ -423,10 +423,10 @@
     #portfolio .content-wrapper .portfolio-wrapper {
       position: relative;
       text-align: center;
-      overflow: hidden; }
+      overflow: hidden;
+      padding: 0px; }
       #portfolio .content-wrapper .portfolio-wrapper .portfolio-thumb {
-        max-width: 100%;
-        height: 150px; }
+        width: 100%; }
 
 /***************************************************/
 /********************* SINGLE **********************/
@@ -473,7 +473,8 @@
           padding: 6px 0px 3px 0px;
           width: 60px;
           text-align: center;
-          background-color: #6EB7A8; }
+          background-color: #6EB7A8;
+          border-bottom: 4px solid #50a291; }
           #blog-list .content-wrapper .blog-wrapper .blog-post .date .month {
             color: #ffffff;
             text-transform: uppercase;
@@ -551,6 +552,7 @@
       padding-top: 50px; }
       #blog-list .content-wrapper .categories .categories-title {
         background-color: #6EB7A8;
+        border-bottom: 4px solid #50a291;
         color: #ffffff;
         text-align: center;
         font-size: 16px;
@@ -564,6 +566,11 @@
           padding: 4px 12px;
           border-bottom: 1px solid #F5F5F5; }
 
+#single-content .content-wrapper {
+  margin-top: -100px;
+  max-width: 800px;
+  margin: 0 auto; }
+
 .archive .archive-hero .titles-wrapper {
   position: relative;
   top: 50%;
@@ -576,9 +583,12 @@
   padding: 40px 0px;
   float: none; }
   #insta #sb_instagram .sb_instagram_header {
+    background-color: #6EB7A8;
+    border-bottom: 10px solid #50a291;
     max-width: 800px;
+    height: auto !important;
     margin: 0px auto;
-    padding-bottom: 20px;
+    padding-bottom: 10px !important;
     float: none;
     height: 100px;
     text-align: center; }
@@ -587,7 +597,9 @@
     #insta #sb_instagram .sb_instagram_header .sbi_header_text {
       float: none; }
       #insta #sb_instagram .sb_instagram_header .sbi_header_text h3 {
+        color: #ffffff;
         float: none;
+        padding: 10px 0px !important;
         margin: 0px !important; }
     #insta #sb_instagram .sb_instagram_header .sbi_header_img {
       margin: 0px auto !important;
@@ -597,6 +609,19 @@
     margin: 0px auto;
     float: none;
     clear: both; }
+  #insta #sb_instagram #sbi_load {
+    max-width: 800px;
+    float: none;
+    padding: 0px !important;
+    margin: 0 auto; }
+    #insta #sb_instagram #sbi_load a {
+      display: block;
+      margin: 0px !important;
+      font-size: 18px;
+      background-color: #6EB7A8;
+      border-radius: 0px !important; }
+      #insta #sb_instagram #sbi_load a:hover {
+        background-color: #50a291; }
 
 #social-footer {
   background-color: #6EB7A8; }

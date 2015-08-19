@@ -1,17 +1,19 @@
 <?php get_header(); ?>
-
+<?php $img = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); ?>
+<?php if(!empty($img)) : ?>
+	<div class="row" id="hero" style="background-image: url(<?php echo $img[0]; ?>)"></div>
+<?php else : ?>
+	<div class="row" id="hero" style="background-image: url(<?php echo get_template_directory_uri() . '/img/waves_bw.png'; ?>)"></div>
+<?php endif; ?>
+<?php get_template_part('partials/navbar'); ?>
 <div id="single-content">
-	<?php if( have_rows('screenshots') ) : while ( have_rows('screenshots') ) : the_row(); ?>
-		<?php $img = get_sub_field('shot'); ?>
-		<div class="slide">
-			<img class="hero-img" src="<?php echo $img['url']; ?>" alt="">
-		</div>
-	<?php endwhile; endif; ?>
-	<a href="/#portfolio">
-		<div class="back-arrow">
-			<i class="fa fa-long-arrow-left"></i>
-		</div>
-	</a>
+	<div class="content-wrapper">
+		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+			<div class="content-inner">
+				<?php the_content(); ?>
+			</div>
+		<?php endwhile; endif; ?>
+	</div>
 </div>
 
 <?php get_footer(); ?>

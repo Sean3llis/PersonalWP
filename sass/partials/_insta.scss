@@ -1,11 +1,15 @@
+$max_width: 800px;
 #insta {
 	#sb_instagram {
 		padding: 40px 0px;
 		float: none;
 		.sb_instagram_header {
-			max-width: 800px;
+			background-color: $color_darkAccent;
+			border-bottom: 10px solid darken($color_darkAccent, 10%);
+			max-width: $max_width;
+			height: auto !important;
 			margin: 0px auto;
-			padding-bottom: 20px;
+			padding-bottom: 10px !important;
 			float: none;
 			height: 100px;
 			text-align: center;
@@ -15,7 +19,9 @@
 			.sbi_header_text{
 				float: none;
 				h3 {
+					color: $color_light;
 					float: none;
+					padding: 10px 0px !important;
 					margin: 0px !important;
 				}
 			}
@@ -29,6 +35,22 @@
 			margin: 0px auto;
 			float: none;
 			clear: both;
+		}
+		#sbi_load {
+			max-width: $max_width;
+			float: none;
+			padding: 0px !important;
+			margin: 0 auto;
+			a {
+				display: block;
+				margin: 0px !important;
+				font-size: 18px;
+				background-color: $color_darkAccent;
+				border-radius: 0px !important;
+				&:hover {
+					background-color: darken($color_darkAccent, 10%);
+				}
+			}
 		}
 	}
 }

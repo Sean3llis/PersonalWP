@@ -17,13 +17,13 @@
 					<div class="row">
 					<?php foreach($posts as $post) : ?>
 
-				<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID) ); ?>
-					<div class="col-sm-3 portfolio-wrapper">
+				<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'small' ); ?>
+					<div class="col-sm-6 portfolio-wrapper">
 						<a href="<?php the_permalink(); ?>">
 							<img src="<?php echo $thumb[0]; ?>" alt="<?php echo $post->post_title; ?>" class="portfolio-thumb">
 						</a>
 					</div>
-					<?php if($counter % 4 === 0) : ?>
+					<?php if($counter % 2 === 0) : ?>
 						</div><div class="row">
 					<?php endif; ?>
 			<?php $counter++; endforeach; ?>
